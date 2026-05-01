@@ -1,0 +1,34 @@
+<div class="detail-page" *ngIf="product">
+  <div class="breadcrumb">
+    <a routerLink="/">Products</a> / {{ product.name }}
+  </div>
+
+  <div class="detail-container">
+    <div class="image-section">
+      <img [src]="product.image" [alt]="product.name" class="detail-image" />
+      <span class="category-badge">{{ product.category }}</span>
+    </div>
+
+    <div class="info-section">
+      <h1 class="product-title">{{ product.name }}</h1>
+      <p class="product-price">\${{ product.price | number:'1.2-2' }}</p>
+      <p class="product-description">{{ product.description }}</p>
+
+      <div class="action-area">
+        <div class="qty-control">
+          <label>Quantity:</label>
+          <div class="qty-wrapper">
+            <button (click)="quantity = quantity > 1 ? quantity - 1 : 1">−</button>
+            <input type="number" min="1" max="10" [(ngModel)]="quantity" />
+            <button (click)="quantity = quantity < 10 ? quantity + 1 : 10">+</button>
+          </div>
+        </div>
+
+        <button (click)="addToCart()" class="btn-add" [class.added]="added">
+          {{ added ? '✓ Added to Cart!' : 'Add to Cart' }}
+        </button>
+        <a routerLink="/cart" class="btn-view-cart">View Cart 🛒</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="product-list-page">
+  <div class="hero">
+    <h1>Discover Our Products</h1>
+    <p>Premium quality items, carefully curated for you</p>
+  </div>
+
+  <div class="notification" *ngIf="notification">{{ notification }}</div>
+
+  <div class="container">
+    <div class="categories">
+      <button
+        *ngFor="let cat of categories"
+        [class.active]="selectedCategory === cat"
+        (click)="selectedCategory = cat"
+        class="cat-btn">
+        {{ cat }}
+      </button>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let product of filteredProducts">
+        <a [routerLink]="['/product', product.id]" class="product-image-link">
+          <img [src]="product.image" [alt]="product.name" class="product-image" />
+          <span class="category-tag">{{ product.category }}</span>
+        </a>
+        <div class="product-info">
+          <a [routerLink]="['/product', product.id]" class="product-name">
+            {{ product.name }}
+          </a>
+          <p class="product-desc">{{ product.description | slice:0:80 }}...</p>
+          <div class="product-footer">
+            <span class="price">\${{ product.price | number:'1.2-2' }}</span>
+            <div class="add-to-cart">
+              <input
+                type="number"
+                min="1"
+                max="10"
+                [(ngModel)]="quantities[product.id]"
+                class="qty-input"
+              />
+              <button (click)="addToCart(product)" class="btn-add">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

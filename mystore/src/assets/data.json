@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Noise-Cancelling Headphones",
+    "price": 129.99,
+    "description": "Premium over-ear headphones with active noise cancellation, 30-hour battery life, and crystal-clear sound quality. Perfect for work and travel.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+    "category": "Electronics"
+  },
+  {
+    "id": 2,
+    "name": "Minimalist Leather Watch",
+    "price": 89.99,
+    "description": "Classic minimalist design with genuine leather strap and Japanese quartz movement. Water-resistant up to 30 meters.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+    "category": "Accessories"
+  },
+  {
+    "id": 3,
+    "name": "Portable Bluetooth Speaker",
+    "price": 59.99,
+    "description": "360-degree surround sound with deep bass. Waterproof IPX7 rating, 12-hour playtime, and built-in microphone for calls.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
+    "category": "Electronics"
+  },
+  {
+    "id": 4,
+    "name": "Organic Cotton Tote Bag",
+    "price": 24.99,
+    "description": "Eco-friendly large tote bag made from 100% organic cotton. Durable, machine washable, and stylish for everyday use.",
+    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=400&h=400&fit=crop",
+    "category": "Bags"
+  },
+  {
+    "id": 5,
+    "name": "Smart Fitness Tracker",
+    "price": 79.99,
+    "description": "Track steps, heart rate, sleep, and calories. 7-day battery life, GPS support, and compatible with iOS and Android.",
+    "image": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&h=400&fit=crop",
+    "category": "Electronics"
+  },
+  {
+    "id": 6,
+    "name": "Stainless Steel Water Bottle",
+    "price": 34.99,
+    "description": "Double-wall vacuum insulated bottle keeps drinks cold 24 hours, hot 12 hours. BPA-free, leak-proof lid, 32oz capacity.",
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&h=400&fit=crop",
+    "category": "Lifestyle"
+  },
+  {
+    "id": 7,
+    "name": "Mechanical Keyboard",
+    "price": 149.99,
+    "description": "TKL compact layout with Cherry MX switches, RGB backlighting, and aluminum frame. Perfect for programmers and typists.",
+    "image": "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=400&fit=crop",
+    "category": "Electronics"
+  },
+  {
+    "id": 8,
+    "name": "Scented Soy Candle Set",
+    "price": 39.99,
+    "description": "Set of 3 hand-poured soy wax candles in relaxing scents: Lavender, Vanilla, and Eucalyptus. 45-hour burn time each.",
+    "image": "https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=400&h=400&fit=crop",
+    "category": "Lifestyle"
+  }
+]

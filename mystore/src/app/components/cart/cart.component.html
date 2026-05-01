@@ -1,0 +1,51 @@
+<div class="cart-page">
+  <div class="container">
+    <h1 class="page-title">Shopping Cart</h1>
+
+    <div class="empty-cart" *ngIf="isEmpty">
+      <span class="empty-icon">🛒</span>
+      <p>Your cart is empty</p>
+      <a routerLink="/" class="btn-shop">Continue Shopping</a>
+    </div>
+
+    <div class="cart-layout" *ngIf="!isEmpty">
+      <div class="cart-items">
+        <div class="cart-item" *ngFor="let item of cartItems">
+          <img [src]="item.product.image" [alt]="item.product.name" class="item-image" />
+          <div class="item-details">
+            <h3>{{ item.product.name }}</h3>
+            <p class="item-category">{{ item.product.category }}</p>
+            <p class="item-price">\${{ item.product.price | number:'1.2-2' }}</p>
+          </div>
+          <div class="item-controls">
+            <input
+              type="number"
+              min="1"
+              max="10"
+              [value]="item.quantity"
+              (change)="updateQty(item.product.id, $event)"
+              class="qty-input"
+            />
+            <span class="item-subtotal">\${{ (item.product.price * item.quantity) | number:'1.2-2' }}</span>
+            <button (click)="remove(item.product.id)" class="btn-remove">✕</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <h2>Order Summary</h2>
+        <div class="summary-row" *ngFor="let item of cartItems">
+          <span>{{ item.product.name }} × {{ item.quantity }}</span>
+          <span>\${{ (item.product.price * item.quantity) | number:'1.2-2' }}</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-total">
+          <span>Total</span>
+          <span>\${{ total | number:'1.2-2' }}</span>
+        </div>
+        <a routerLink="/checkout" class="btn-checkout">Proceed to Checkout →</a>
+        <a routerLink="/" class="btn-continue">Continue Shopping</a>
+      </div>
+    </div>
+  </div>
+</div>

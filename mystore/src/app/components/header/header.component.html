@@ -1,0 +1,16 @@
+<header class="header">
+  <div class="header-container">
+    <a routerLink="/" class="logo">
+      <span class="logo-icon">🛍️</span>
+      <span class="logo-text">MyStore</span>
+    </a>
+    <nav class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Products</a>
+      <a routerLink="/cart" routerLinkActive="active" class="cart-link">
+        <span class="cart-icon">🛒</span>
+        Cart
+        <span class="badge" *ngIf="itemCount > 0">{{ itemCount }}</span>
+      </a>
+    </nav>
+  </div>
+</header>
